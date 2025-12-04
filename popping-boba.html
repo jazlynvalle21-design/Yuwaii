@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuwaii</title>
+
+  <!--CSS Style-->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Nunito & Cooper STD Black Font link-->
+  <link rel="stylesheet" href="https://use.typekit.net/mgx1zpn.css">
+
+  <!--Fontawesome link for socials-->
+  <script src="https://kit.fontawesome.com/18925087e4.js" crossorigin="anonymous"></script>
+
+  <!--FAVICON CODE-->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/Valle_Logo_Design.png" alt="Yuwaii logo">
+          </a>
+        </div>
+
+        <!--Responsive Nav-->
+        <div class="topnav" id="myTopnav">
+          <a href="bio.html">BIO</a>
+          <a href="portfolio.html">PORTFOLIO</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+        </script>
+      </nav>
+  </header>
+
+
+ <!--Body content-->
+  <div class="art-container">
+  <div class="art-left">
+    <img src="images/Hand-drawn_Typography_Valle.png" alt="popping-boba">
+  </div>
+
+ <div class="art-right gallery-label">
+    <h3>"Popping Boba Brusts Flavor"</h3>
+    <p class="medium">Typography Art, 2024</p>
+
+    <p class="description">
+This playful typographic illustration celebrates the bright, explosive energy of popping boba. Each word is designed with its own visual personality—soft, bubbly forms for “boba,” scattered multicolored bursts for “burst,” and dynamic letterforms for “flavor.” The composition mimics the joyful chaos of bubbles popping, using vibrant colors and rhythmic shapes to create a sense of movement and excitement.
+    </p>
+        <p class="description">
+By blending expressive hand-drawn lettering with bold digital color, the piece transforms typography into a lively visual experience. It captures the fun, sweetness, and explosive surprise of a familiar treat, turning text into an energetic celebration of flavor.
+    </p>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/Asset_Homepage_1.png" alt="" width="1920" class="waves">
+
+    <div class="socials">
+      <a href="https://www.instagram.com/yuwaii_studios/"><i class="fa-brands fa-instagram fa-7x"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+/* ==================================================
+   1. CSS RESET 
+================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+
+/* ==================================================
+   2. GLOBAL STYLES
+================================================== */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background-color: #CBE4FF;
+  overflow-x: hidden;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #573d71;
+  font-family: "nunito", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 100px;
+}
+
+
+/* ==================================================
+   3. HEADER + NAVIGATION
+================================================== */
+
+header {
+  background-color: #573d71;
+  padding: 8px 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+nav .logo img {
+  width: 100px;
+  display: block;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+/* TOP NAV LINKS */
+.topnav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+.topnav a {
+  display: block;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  color: #b9b0ca;
+  font-family: "nunito", sans-serif;
+  font-weight: 400;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav a:hover {
+  background-color: #8a7ba7;
+  color: #CBE4FF;
+}
+
+/* ---------- MOBILE NAV ---------- */
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 6px 12px;
+  }
+
+  .topnav {
+    gap: 0;
+  }
+
+  .topnav a:not(.icon) {
+    display: none;
+  }
+
+  .topnav .icon {
+    display: block;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+
+  .topnav.responsive {
+    flex-direction: column;
+    align-items: flex-end;
+    background: transparent;
+  }
+
+  .topnav.responsive a {
+    display: block;
+    padding: 10px 16px;
+    text-align: right;
+  }
+}
+
+
+/* ==================================================
+   4. YUWAI I LETTERS FLOATING
+================================================== */
+
+.letters span {
+  position: absolute;
+  z-index: 50;
+  display: inline-block;
+
+  color: #573d71;
+  font-family: "cooper-black-std", serif;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+/* INDIVIDUAL LETTER POSITIONS */
+.letter-y { font-size: 250px; top: 565px; left: 20px;  --r: 10deg; }
+.letter-u { font-size: 170px; top: 575px; left: 300px; --r: 15deg; }
+.letter-w { font-size: 200px; top: 610px; left: 460px; --r: 8deg; }
+.letter-a { font-size: 140px; top: 550px; left: 725px; --r: -15deg; }
+.letter-i1{ font-size: 180px; top: 550px; left: 900px; --r: 5deg; }
+.letter-i2{ font-size: 230px; top: 550px; left: 1100px; --r: 14deg; }
+
+.letters span:hover {
+  scale: 1.05;
+  animation: waveFloat 4s ease-in-out infinite;
+}
+
+@keyframes waveFloat {
+  0%   { transform: rotate(var(--r)) translateY(0); }
+  25%  { transform: rotate(calc(var(--r) + 2deg)) translateY(-8px); }
+  50%  { transform: rotate(var(--r)) translateY(-4px); }
+  75%  { transform: rotate(calc(var(--r) - 2deg)) translateY(-10px); }
+  100% { transform: rotate(var(--r)) translateY(0); }
+}
+
+/* ---------- MOBILE LETTER POSITIONS ---------- */
+@media screen and (max-width: 600px) {
+  .letter-y { font-size: 70px; top: 846px; left: 10px; }
+  .letter-u { font-size: 40px; top: 860px; left: 90px; }
+  .letter-w { font-size: 55px; top: 862px; left: 135px; --r: 15deg; }
+  .letter-a { font-size: 35px; top: 838px; left: 220px; }
+  .letter-i1{ font-size: 55px; top: 848px; left: 280px; --r: 15deg; }
+  .letter-i2{ font-size: 40px; top: 822px; left: 320px; --r: -15deg; }
+}
+
+
+/* ==================================================
+   5. GLOBAL CONTAINERS
+================================================== */
+
+.container {
+  max-width: 2000px;
+  padding: 70px;
+}
+
+.container-body {
+  max-width: 700px;
+  margin: 80px auto 100px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+/* ==================================================
+   6. BIO PAGE + WIDGETS
+================================================== */
+
+.bio-nav {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.widgets {
+  width: 230px;
+  text-align: center;
+}
+
+.widgets img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.widgets .desc {
+  margin-top: -215px;
+  color: #CBE4FF;
+  font-family: "nunito", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* -------- MOBILE BIO NAV -------- */
+@media screen and (max-width: 600px) {
+  .bio-nav {
+    justify-content: center;
+    text-align: center;
+    gap: 250px;
+  }
+
+  .widgets {
+    width: 230px;
+    margin: 0 auto;
+  }
+
+  .widgets .desc {
+    margin-top: -215px;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ==================================================
+   7. ABOUT ME PAGE
+================================================== */
+
+.pfp {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+
+.pfp img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.me-text {
+  color: #573d71;
+  font-family: "nunito", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+
+/* ==================================================
+   8. PORTFOLIO ITEMS / ART WIDGETS
+================================================== */
+
+.art-widgets {
+  width: auto;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 250px;
+}
+
+.art-widgets img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.art-widgets .desc {
+  margin-top: -250px;
+  color: #573d71;
+  font-family: "nunito", sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* -------- MOBILE ART WIDGETS -------- */
+@media screen and (max-width: 600px) {
+  .art-widgets {
+    width: 100%;
+    margin-bottom:30px;
+  }
+
+  .art-widgets img {
+    width: 100%;
+    max-width: 300px;
+  }
+    .art-widgets .desc {
+    margin-top: -260px;
+    font-size: 1.2rem;
+    text-align: center;
+    }
+}
+
+/* ==================================================
+   9. ART WORKS
+================================================== */
+.art-container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;  /* centers the whole block */
+  padding: 20px;
+  margin: 0 auto;           /* centers container in page */
+  max-width: 2000px;        /* keeps layout clean */
+  margin-top: 40px;   /* adjust this number to move it more/less */
+
+}
+
+
+.art-left img {
+  width: 100%;
+  max-width: 800px;   /* control image size */
+  border-radius: 8px; /* optional */
+}
+
+.art-right {
+  max-width: 600px;   /* keep text readable */
+}
+h3{
+  text-align: left;
+    color: #573d71;
+  font-family: "nunito", sans-serif;
+  font-size: xxx-large;
+}
+.medium{
+  color: #573d71;
+  font-family: "nunito", sans-serif;
+}
+
+.description{
+    color: #573d71;
+  font-family: "nunito", sans-serif;
+  font-size: 1.3rem;
+}
+
+@media(max-width: 600px) {
+  .art-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .art-right {
+    max-width: 100%;
+  }
+ h3{
+  text-align: center ;
+  padding-bottom: 30px;
+  }
+}
+
+
+/* ==================================================
+   10. FOOTER + SOCIALS
+================================================== */
+
+footer {
+  width: 100%;
+  margin-top: auto;
+}
+
+.waves {
+  width: 100%;
+}
+
+.socials {
+  background-color: #573d71;
+  margin-top: -10px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 200px;
+}
+
+.socials a {
+  margin-right: 10px;
+  padding-bottom: 20px;
+  color: #b9b0ca;
+  position: sticky;
+}
+
+.socials a:hover {
+  color: #8a7ba7;
+}
+
+/* -------- MOBILE SOCIALS -------- */
+@media screen and (max-width: 600px) {
+  .socials {
+    justify-content: right;
+    padding-right: 0;
+    padding-top: 10px;
+    margin-top: -5px;
+  }
+
+  .socials a {
+    margin-right: 15px;
+    padding-bottom: 20px;
+  }
+
+  .socials a i {
+    font-size: 2.5rem !important;
+  }
+}

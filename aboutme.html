@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuwaii</title>
+
+  <!--CSS Style-->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Nunito & Cooper STD Black Font link-->
+  <link rel="stylesheet" href="https://use.typekit.net/mgx1zpn.css">
+
+  <!--Fontawesome link for socials-->
+  <script src="https://kit.fontawesome.com/18925087e4.js" crossorigin="anonymous"></script>
+
+  <!--FAVICON CODE-->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/Valle_Logo_Design.png" alt="Yuwaii logo">
+          </a>
+        </div>
+
+        <!--Responsive Nav-->
+        <div class="topnav" id="myTopnav">
+          <a href="bio.html">BIO</a>
+          <a href="portfolio.html">PORTFOLIO</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+        </script>
+      </nav>
+  </header>
+
+
+  <!--Body content-->
+   <h2>ABOUT ME</h2>
+  <div class="container-body">
+
+
+    <!-- Centered profile picture -->
+    <div class="pfp">
+      <img src="images/pfp.png" width="200" height="200" alt="Profile photo">
+    </div>
+
+    <!-- Text -->
+    <div class="me-text">
+      <p>I, Jazlyn Valle, am a visual artist and designer with a passion for storytelling through bold, imaginative imagery. I aspire to become a children’s book illustrator, creating work that inspires curiosity, warmth, and wonder in young audiences. Much of my artwork is driven by character, emotion, and the desire to build worlds that feel both playful and meaningful.</p>
+
+      <p>While my main focus is graphic design, my creative practice also expands into photography, animation, and video art. I enjoy exploring how these disciplines intersect to communicate ideas in fresh and engaging ways. Working across multiple mediums allows me to experiment freely and discover new methods of expressing narrative and atmosphere. I’m especially drawn to projects that combine digital and traditional approaches, blending modern techniques with hand-crafted charm.</p>
+
+      <p>My approach to art is rooted in curiosity and play. I love experimenting with color, texture, and digital tools to bring expressive stories to life. Whether I am designing, illustrating, or animating, my goal is to create visuals that connect with people and spark a sense of joy and imagination. I’m continually inspired by everyday moments, personal experiences, and the whimsical nature of childhood, all of which influence the tone and energy of my work.</p>
+
+      <p>Ultimately, I hope to develop a creative career where I can share meaningful stories, collaborate with other artists, and bring imaginative worlds to young readers. Art, for me, is not only a form of expression but a way to create connection, comfort, and wonder.</p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/Asset_Homepage_1.png" alt="" width="1920" class="waves">
+
+    <div class="socials">
+      <a href="https://www.instagram.com/yuwaii_studios/"><i class="fa-brands fa-instagram fa-7x"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuwaii</title>
+
+  <!--CSS Style-->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Nunito & Cooper STD Black Font link-->
+  <link rel="stylesheet" href="https://use.typekit.net/mgx1zpn.css">
+
+  <!--Fontawesome link for socials-->
+  <script src="https://kit.fontawesome.com/18925087e4.js" crossorigin="anonymous"></script>
+
+  <!--FAVICON CODE-->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/Valle_Logo_Design.png" alt="Yuwaii logo">
+          </a>
+        </div>
+
+        <!--Responsive Nav-->
+        <div class="topnav" id="myTopnav">
+          <a href="bio.html">BIO</a>
+          <a href="portfolio.html">PORTFOLIO</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+        </script>
+      </nav>
+  </header>
+
+
+ <!--Body content-->
+  <div class="art-container">
+  <div class="art-left">
+    <img src="images/Full_Body_JValle_Final.png" alt="full body">
+  </div>
+
+ <div class="art-right gallery-label">
+    <h3>Mystical Deersa</h3>
+    <p class="medium">Digital Photography, 2025</p>
+
+    <p class="description">
+This piece explores the enchanting yet unsettling allure of mythical forest creature. The "Mystical Deersa" serve as both guides and temptations, their luminous presence pulling travelers deeper into the woods. Their elegance and soft glow create a sense of calm that masks a more ambiguous intention, blurring the line between safety and danger. By portraying the deer-like creature as both beautiful and otherworldly, the artwork captures the tension between curiosity and caution that the forest evokes.
+    </p>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/Asset_Homepage_1.png" alt="" width="1920" class="waves">
+
+    <div class="socials">
+      <a href="https://www.instagram.com/yuwaii_studios/"><i class="fa-brands fa-instagram fa-7x"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
